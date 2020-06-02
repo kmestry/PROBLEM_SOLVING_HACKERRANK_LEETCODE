@@ -29,13 +29,13 @@ public class ClimbingTheLadder {
 
             for (int j = 0; j < linkedScoresList.size(); j++) {
 
+
                 if (alice[i] > linkedScoresList.get(j)) {
                     linkedScoresList.add(j, alice[i]);
                     result[i] = j + 1;
                     break;
                 } else if (alice[i] == linkedScoresList.get(j)) {
-                    linkedScoresList.remove(j);
-                    linkedScoresList.add(j, alice[i]);
+                    linkedScoresList.add(j, linkedScoresList.remove(j));
                     result[i] = j + 1;
                     break;
                 } else if (j == linkedScoresList.size() - 1) {
