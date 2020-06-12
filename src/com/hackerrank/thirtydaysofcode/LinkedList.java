@@ -16,15 +16,15 @@ class LinkedList {
 
     public static Node insert(Node head, int data) {
         //Complete this method
-        Node nodeToAdd = new Node(data);
+        Node nodeBinaryToAdd = new Node(data);
         Node pointerHead = head;
         if (head == null) {
-            return nodeToAdd;
+            return nodeBinaryToAdd;
         } else {
             while (pointerHead.next != null) {
                 pointerHead = pointerHead.next;
             }
-            pointerHead.next = nodeToAdd;
+            pointerHead.next = nodeBinaryToAdd;
         }
         return head;
     }
