@@ -1,6 +1,9 @@
 package com.hackerrank.algorithms.slidingwindow;
 
+import java.io.IOException;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class MaximumElementSubArray {
@@ -8,47 +11,89 @@ public class MaximumElementSubArray {
   /*  Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3
     Output: [3,3,5,5,6,7]*/
 
-    public static void main(String[] args) {
-        //maxSlidingWindow(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3);
+    public static void main(String[] args) throws IOException {
+        int[] result = maxSlidingWindowOptimizeTry1(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3);
 
-        //maximumSumOfSubArrayInSlidingWindow(new int[]{1, 9, -1, -2, 7, 3, -1, 2}, 4);
+       /* BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String[] inputArray = bufferedReader.readLine().split(",");
+        int[] input = new int[inputArray.length];
+        for (int i = 0; i < inputArray.length; i++) {
+            input[i] = Integer.parseInt(inputArray[i]);
+        }
 
-        // maximumSumOfSubArrayInSlidingWindow(new int[]{3,2,6,-1,4,5,-1,2}, 4);
-        maximumSumOfSubArrayInSlidingWindow(new int[]{1, 4, 2, 10, 2, 3, 1, 0, 20}, 4);
+        String windowSize = bufferedReader.readLine();
+
+        int[] result = maxSlidingWindowOptimizeTry1(input, Integer.parseInt(windowSize));*/
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + ",");
+        }
+
+        //
+
 
         //  maxSlidingWindow(new int[]{1}, 1);
 
+
     }
 
+    //1, 3, -1, -3, 0,5, 3, 6, 7
+    //max element will always be in front of queue
+    public static int[] maxSlidingWindowOptimizeTry1(int[] nums, int k) {
 
-    public static int maximumSumOfSubArrayInSlidingWindow(int[] nums, int k) {
+        Deque<Integer> integerQueue = new ArrayDeque<>();
+        int windowSize = k;
 
-        int originalWindow = k;
-        int maximumSumOfSubArray = 0;
+        if (windowSize == 1) {
+            return nums;
+        }
+        int arrayIndexCounter = 1;
+        int[] result = new int[nums.length - k + 1];
+        for (int i = 0; i < windowSize; i++) {
+            addToQueue(nums, integerQueue, i, k);
+        }
+        result[0] = integerQueue.getFirst();
+        integerQueue.remove(nums[0]);  // always remove first element as this is the first window and we are done with max of first window.
 
-        Integer initialSumOfWindow = Integer.valueOf(0);
+        int pointer = 1;
+        for (int i = windowSize; i < nums.length; i++) {
 
-        for (int i = 0; i < k; i++) {
-            initialSumOfWindow += nums[i];
+            addToQueue(nums, integerQueue, i, k);
 
+            result[arrayIndexCounter] = integerQueue.getFirst();
+
+            System.out.println("integerQueue = " + integerQueue);
+            integerQueue.remove(nums[pointer]);
+            pointer++;
+            arrayIndexCounter++;
         }
 
-        maximumSumOfSubArray = initialSumOfWindow;
-        int nextSum = initialSumOfWindow;
-        System.out.println("nextSum = " + nextSum);
 
-        for (int i = 1; i <= nums.length - k; i++) {
-            int sumOfSubArray = nextSum - nums[i - 1] + nums[originalWindow + i - 1];
-            nextSum = sumOfSubArray;
-            System.out.println("nextSum = " + nextSum);
-            if (sumOfSubArray > maximumSumOfSubArray) {
-                maximumSumOfSubArray = sumOfSubArray;
+        return result;
+    }
+
+    private static void addToQueue(int[] nums, Deque<Integer> integerQueue, int i, int k) {
+        if (integerQueue.isEmpty()) {
+            integerQueue.addFirst(nums[i]);
+        } else if (nums[i] >= integerQueue.getFirst()) {
+            integerQueue.addFirst(nums[i]);
+        } else {
+           /* Set<Integer> setElementsLowerThanCurrent = integerQueue.stream().filter(integer -> integer < nums[i]).collect(Collectors.toSet());
+            integerQueue.removeAll(setElementsLowerThanCurrent);*/
+
+          /*  while (!integerQueue.isEmpty() && i >0 ) {
+                if (integerQueue.peekLast() < nums[i]) {
+                    integerQueue.removeLast();
+                }
+                k--;
+            }*/
+
+            while (integerQueue.size() > 0 && integerQueue.peekLast() < nums[i]) {
+                integerQueue.pollLast();
             }
+
+            integerQueue.add(nums[i]);
         }
 
-
-        System.out.println("maximumSumOfSubArray = " + maximumSumOfSubArray);
-        return maximumSumOfSubArray;
     }
 
 
