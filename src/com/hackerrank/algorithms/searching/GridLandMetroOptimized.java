@@ -28,13 +28,13 @@ public class GridLandMetroOptimized {
                     rowMap.put(Math.toIntExact(row), 1);
                 }
                 for (long j = column1 - 1; j <= column2 - 1; j++) {
-                    if ((trackMap.containsKey(j)) && (rowMap.get((int) row) > 1)) {
+                    if ((!trackMap.containsKey(j)) || (rowMap.get((int) row) <= 1)) {
+                        trackMap.put(j, (long) 1);
+                        counter++;
+                    } else {
                         //trackMap.put(j, (long) 1);
                         // counter++;
 
-                    } else {
-                        trackMap.put(j, (long) 1);
-                        counter++;
                     }
 
                 }
@@ -43,9 +43,9 @@ public class GridLandMetroOptimized {
         }
 
 
-        long nm = n * m;
+        long nm = (long) n * (long) m;
 
-        int placesWhereLampPostCanBePlaced = (int) (nm - counter);
+        long placesWhereLampPostCanBePlaced = (int) (nm - counter);
 
 
         return BigInteger.valueOf(placesWhereLampPostCanBePlaced);
