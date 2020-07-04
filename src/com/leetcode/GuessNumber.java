@@ -1,4 +1,4 @@
-package com.hackerrank.leetcode;
+package com.leetcode;
 
 
 import java.util.Random;

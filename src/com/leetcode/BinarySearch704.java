@@ -1,4 +1,4 @@
-package com.hackerrank.leetcode;
+package com.leetcode;
 
 class BinarySearch704 {
     public int search(int[] nums, int target) {
