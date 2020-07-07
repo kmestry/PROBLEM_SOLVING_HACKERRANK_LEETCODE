@@ -13,9 +13,7 @@ public class PlusOne66 {
             return digits;
         }
 
-        for (int i = 0; i < lengthOfArray - 1; i++) {
-            oneArray[i] = 0;
-        }
+
         //last digit is always 1
         oneArray[lengthOfArray - 1] = 1;
 
