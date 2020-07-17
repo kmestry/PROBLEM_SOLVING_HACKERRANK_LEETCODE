@@ -3,7 +3,7 @@ package com.leetcode;
 public class PoweXNOptimized50 {
 
     public static void main(String[] args) {
-        double result = new PoweXNOptimized50().myPow(2, 10);
+        double result = new PoweXNOptimized50().myPowIterative(2, 10);
         System.out.println("result = " + result);
     }
 
@@ -18,6 +18,19 @@ public class PoweXNOptimized50 {
 
     public double myPow(double x, int n) {
         return pow_util(x, n);
+    }
+
+    public double myPowIterative(double x, int n) {
+
+        double ans = 1;
+        long absN = Math.abs((long) n);
+        while (absN > 0) {
+            if ((absN & 1) == 1) ans *= x;
+            absN >>= 1;
+            x *= x;
+        }
+        return n < 0 ? 1 / ans : ans;
+
     }
 
 }
