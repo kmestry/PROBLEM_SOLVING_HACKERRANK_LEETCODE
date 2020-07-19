@@ -10,8 +10,20 @@ import java.util.Queue;
 public class CourseSchedule2Optimized {
 
 
+/*
+    Node having indegree of 0 will always be first in the topological order.
+
+    Maintain hashmap having indegree count of every node or vertex.
+    Maintain hashmap having outdegree edges going from every node or vertex.
+    Maintain queue to add every node or vertex to it having indegree 0.
+    To understand topological sort watch this https://www.youtube.com/watch?v=dis_c84ejhQ . very helpful to get intuition of the problem.
+    If the output array contains less element than numCourse return empty array else return result array.
+
+
+*/
+
     public static void main(String[] args) {
-        findOrder(3, new int[][]{{1, 0}, {1, 2}, {0, 1}});
+        findOrder(3, new int[][]{{1, 0}, {2, 0}, {3, 1}, {3, 2}});
     }
 
     //2
@@ -20,7 +32,7 @@ public class CourseSchedule2Optimized {
     public static int[] findOrder(int numCourses, int[][] prerequisites) {
         List<Integer> result = new ArrayList<>();
         Map<Integer, Integer> indegreeMap = new HashMap<>();
-        Map<Integer, List<Integer>> mapOfCourse = new HashMap<>();
+        Map<Integer, List<Integer>> outDegreeEdgesMap = new HashMap<>();
 
         for (int i = 0; i < prerequisites.length; i++) {
 
@@ -32,17 +44,18 @@ public class CourseSchedule2Optimized {
 
         }
 
+        //outdegree.....
         for (int i = 0; i < prerequisites.length; i++) {
 
-            if (mapOfCourse.containsKey(prerequisites[i][1])) {
-                List<Integer> integerList = mapOfCourse.get(prerequisites[i][1]);
+            if (outDegreeEdgesMap.containsKey(prerequisites[i][1])) {
+                List<Integer> integerList = outDegreeEdgesMap.get(prerequisites[i][1]);
                 integerList.add(prerequisites[i][0]);
-                mapOfCourse.put(prerequisites[i][1], integerList);
+                outDegreeEdgesMap.put(prerequisites[i][1], integerList);
 
             } else {
                 List<Integer> list = new ArrayList<>();
                 list.add(prerequisites[i][0]);
-                mapOfCourse.put(prerequisites[i][1], list);
+                outDegreeEdgesMap.put(prerequisites[i][1], list);
             }
 
         }
@@ -63,7 +76,7 @@ public class CourseSchedule2Optimized {
 //4, [[1,0],[2,0],[3,1],[3,2]]
         while (!queue.isEmpty()) {
             int prerequisite = queue.poll();
-            List<Integer> integerListMap = mapOfCourse.get(prerequisite);
+            List<Integer> integerListMap = outDegreeEdgesMap.get(prerequisite);
             if (integerListMap != null) {
                 for (Integer value : integerListMap) {
                     int counter = indegreeMap.get(value);
