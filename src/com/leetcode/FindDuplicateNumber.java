@@ -7,7 +7,8 @@ import java.util.Set;
 
 public class FindDuplicateNumber {
     public static void main(String[] args) {
-
+        //new FindDuplicateNumber().findDuplicateFloydTortoiseHareAlgo(new int[]{2, 5, 9, 6, 9, 3, 8, 9, 7, 1});
+        new FindDuplicateNumber().findDuplicateFloydTortoisePractise(new int[]{1, 3, 4, 2, 2});
     }
 
     public int findDuplicate(int[] nums) {
@@ -41,5 +42,42 @@ public class FindDuplicateNumber {
     }
 
     //[1,3,4,2,2]
+    public int findDuplicateFloydTortoiseHareAlgo(int[] nums) {
+        //tortoise is slow pointer and hare is fast pointer.
+        //tortoise moves 1 step hare 2 steps . the search is value based instead of index based.
+        int tortoisePointer = 0;
+        int harePointer = 0;
+
+        do {
+            harePointer = nums[nums[harePointer]];
+            tortoisePointer = nums[tortoisePointer];
+
+        } while (nums[harePointer] != nums[tortoisePointer]);
+        tortoisePointer = 0;  // reset tortoise to start of array. now move both hare and tortoise 1 step.
+        while (nums[harePointer] != nums[tortoisePointer]) {
+            tortoisePointer = nums[tortoisePointer];
+            harePointer = nums[harePointer];
+        }
+
+        return nums[harePointer];
+
+    }
+
+    public int findDuplicateFloydTortoisePractise(int[] nums) {
+        int slowPointer = 0;
+        int fastPointer = 0;
+
+        do {
+            slowPointer = nums[slowPointer];
+            fastPointer = nums[nums[fastPointer]];
+        } while (nums[slowPointer] != nums[fastPointer]);
+        slowPointer = 0;
+        do {
+            slowPointer = nums[slowPointer];
+            fastPointer = nums[fastPointer];
+        } while (nums[slowPointer] != nums[fastPointer]);
+
+        return nums[fastPointer];
+    }
 
 }
