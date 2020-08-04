@@ -3,27 +3,28 @@ package com.leetcode;
 public class FibonacciNumber {
 
     public static void main(String[] args) {
-        int result = new FibonacciNumber().fibDP(10);
+       /* int result = new FibonacciNumber().fib(10);
+        System.out.println("result = " + result);*/
+
+        int[] cache = new int[51];
+        cache[0] = 0;
+        cache[1] = 1;
+        int result = new FibonacciNumber().fib(40, cache);
         System.out.println("result = " + result);
     }
 
-    public int fib(int N) {
 
-        if (N == 0)
-            return 0;
-        if (N == 1)
-            return 1;
+    public int fib(int N, int[] cache) {
 
-        int[] cache = new int[N + 1];
-
-        cache[0] = 0;
-        cache[1] = 1;
-
-        if (cache[N] != 0)
+        if (N <= 1)
+            return N;
+        if (cache[N] != 0) {
             return cache[N];
+        }
 
-        return fib(N - 1) + fib(N - 2);
+        cache[N] = fib(N - 1, cache) + fib(N - 2, cache);
 
+        return cache[N];
 
     }
 
