@@ -13,26 +13,31 @@ public class HouseRobber {
 
     public int rob(int[] nums) {
 
-        return helper(nums, nums.length - 1);
-
-
+        Integer[] dp = new Integer[nums.length + 1];
+        return helper(nums, 0, dp);
+        // return maxRobbery;
     }
 
-    private int helper(int[] nums, int index) {
+    private int helper(int[] nums, int index, Integer[] dp) {
 
-        if (index < 0) return 0;
 
-        if (map.get(index) != null) {
-            return map.get(index);
+        if (index >= nums.length) {
+
+            return 0;
         }
 
-        int robberyDone = helper(nums, index - 2) + nums[index];
-        int robberyNotDone = helper(nums, index - 1);
+        if (dp[index] != null)
+            return dp[index];
 
-        int result = Math.max(robberyDone, robberyNotDone);
 
-        map.put(index, result);
+        int robberyDone = helper(nums, index + 2, dp) + nums[index]; //robbery done. skip next house.
+        int robberyNotDone = helper(nums, index + 1, dp);//robbery not done.
 
-        return result;
+        int maxRobbery = Math.max(robberyDone, robberyNotDone);
+
+        dp[index] = maxRobbery;
+
+        return maxRobbery;
+
     }
 }
