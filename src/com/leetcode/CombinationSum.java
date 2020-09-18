@@ -8,8 +8,10 @@ public class CombinationSum {
     List<List<Integer>> resultList = new ArrayList<>();
 
     public static void main(String[] args) {
-        List<List<Integer>> resultList = new CombinationSum().combinationSum(new int[]{2, 3, 6, 7}, 7);
-        System.out.println("resultList = " + resultList);
+        //List<List<Integer>> resultList = new CombinationSum().combinationSum(new int[]{2, 3, 6, 7}, 7);
+        System.out.println("-1-3 = " + (5 + 4 - 3 - 2));
+
+        // System.out.println("resultList = " + resultList);
     }
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
