@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class FourSum {
+public class FourSumBackTracking {
 
 
     Set<List<Integer>> resultList = new HashSet<>();
@@ -14,7 +14,7 @@ public class FourSum {
     //[-3,-2,-1,0,0,1,2,3]
     //0
     public static void main(String[] args) {
-        new FourSum().fourSum(new int[]{-3, -2, -1, 0, 0, 1, 2, 3}, 0);
+        new FourSumBackTracking().fourSum(new int[]{-3, -2, -1, 0, 0, 1, 2, 3}, 0);
     }
 
     public List<List<Integer>> fourSum(int[] nums, int target) {
