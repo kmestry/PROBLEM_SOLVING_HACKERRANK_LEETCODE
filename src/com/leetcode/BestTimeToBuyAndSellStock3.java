@@ -24,7 +24,7 @@ public class BestTimeToBuyAndSellStock3 {
             return 0;
         }
 
-        String key = index + "kun" + isBuy + "aguero" + maxTransactions;
+        String key = new StringBuilder().append(index).append("kun").append(isBuy).append("aguero").append(maxTransactions).toString();
         if (hm.containsKey(key)) {
             return hm.get(key);
         }
