@@ -28,4 +28,32 @@ public class FindSmallestDivisorGivenThreshold {
         return divisor - 1;
 
     }
+
+    public int smallestDivisorBinarySearch(int[] nums, int threshold) {
+
+        int l = 0;
+        int r = 1000000;
+
+        while (l <= r) {
+
+            int divisor = l + (r - l) / 2;
+            int sum = 0;
+            for (int i = 0; i < nums.length; i++) {
+                double divided = (double) nums[i] / (double) divisor;
+
+                sum += Math.ceil(divided);
+            }
+            //when divisor increases sum will be smaller
+            if (sum > threshold) {
+                l = divisor + 1;
+            } else {
+                r = divisor - 1;
+            }
+
+
+        }
+
+        return l;
+
+    }
 }
