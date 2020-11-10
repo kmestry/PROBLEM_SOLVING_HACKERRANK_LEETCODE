@@ -1,14 +1,14 @@
 package com.leetcode;
 
-import javafx.util.Pair;
 
-import java.util.HashSet;
-import java.util.Set;
+
+
+
 
 public class KDiffPairsInArray {
 
     //brute force initial solution.
-    public int findPairs(int[] nums, int k) {
+    /*public int findPairs(int[] nums, int k) {
         //[3,1,4,1,5], k = 2
         Set<Pair<Integer, Integer>> set = new HashSet<>();
         int count = 0;
@@ -31,5 +31,5 @@ public class KDiffPairsInArray {
         }
 
         return count;
-    }
+    }*/
 }
