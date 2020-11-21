@@ -3,13 +3,15 @@ package com.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+//backtracking approach.
 public class NumbersAtMostNGivenDigitSet {
 
     int count = 0;
 
     public static void main(String[] args) {
-        int result = new NumbersAtMostNGivenDigitSet().atMostNGivenDigitSet(new String[]{"1", "2", "3", "4", "6", "7", "8", "9"}, 67688637);
+        // int result = new NumbersAtMostNGivenDigitSet().atMostNGivenDigitSet(new String[]{"1", "2", "3", "4", "6", "7", "8", "9"}, 67688637);
         //int result = new NumbersAtMostNGivenDigitSet().atMostNGivenDigitSet(new String[]{"1", "3", "5", "7"}, 5367);
+        int result = new NumbersAtMostNGivenDigitSet().atMostNGivenDigitSet(new String[]{"3", "5", "4"}, 676);
         System.out.println("result = " + result);
     }
 
