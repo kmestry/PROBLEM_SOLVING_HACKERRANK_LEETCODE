@@ -5,12 +5,12 @@ import java.util.Map;
 
 public class HouseRobber3 {
 
-    int firstCase = 0;
-    int secondCase = 0;
-    Map<TreeNode, Integer> map = new HashMap<>();
+    Map<TreeNode, Integer> dpMap = new HashMap<>();
 
     public static void main(String[] args) {
-        TreeNode treeNode = new TreeNode(3, new TreeNode(2, null, new TreeNode(3)), new TreeNode(3, null, new TreeNode(1)));
+        // TreeNode treeNode = new TreeNode(3, new TreeNode(2, null, new TreeNode(3)), new TreeNode(3, null, new TreeNode(1)));
+
+        TreeNode treeNode = new TreeNode(2, new TreeNode(1, null, new TreeNode(4)), new TreeNode(3));
 
         HouseRobber3 obj = new HouseRobber3();
 
@@ -19,27 +19,37 @@ public class HouseRobber3 {
 
     public int rob(TreeNode root) {
 
-        if (root == null) return 0;
-
-        //[4,1,null,2,null,3]
-        if (map.containsKey(root)) {
-            return map.get(root);
+        if (root == null) {
+            return 0;
         }
 
-        int value = 0;
-        if (root.left != null) {
-            value += rob(root.left.left) + rob(root.left.right);
+   /*     if (dpMap.containsKey(root))
+            return dpMap.get(root);*/
 
+        int rob = 0;
+        int noRob = 0;
+
+        //case 1 : start
+        // if we rob root we can rob its 1st grandchildrens
+        if (root.left != null) {
+            rob += rob(root.left.left) + rob(root.left.right);
         }
         if (root.right != null) {
-            value += rob(root.right.left) + rob(root.right.right);
+            rob += rob(root.right.left) + rob(root.right.right);
         }
+        rob += root.val; // rob root
+        //case 1 : end
 
-        int result = Math.max(value + root.val, rob(root.left) + rob(root.right));
 
-        map.put(root, result);
+        //case 2 : start
+        //if we do not rob root we can rob its children
+        noRob += rob(root.left) + rob(root.right);
+        //case 2 : end
 
-        return result;
+        int max = Math.max(rob, noRob);
 
+        dpMap.put(root, max);
+
+        return max;
     }
 }
