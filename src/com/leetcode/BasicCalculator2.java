@@ -9,7 +9,7 @@ public class BasicCalculator2 {
     boolean isSamePriorityOperands = true;
 
     public static void main(String[] args) {
-        int val = new BasicCalculator2().calculate("2*3+4");
+        int val = new BasicCalculator2().calculate("-2*3+4");
         System.out.println("val = " + val);
     }
 
@@ -41,6 +41,7 @@ public class BasicCalculator2 {
     }
 
     private void pushToStack(int currNum, char ch, Stack<Integer> stack) {
+
         if (ch == '+') {
             stack.push(currNum);
         } else if (ch == '-') {
