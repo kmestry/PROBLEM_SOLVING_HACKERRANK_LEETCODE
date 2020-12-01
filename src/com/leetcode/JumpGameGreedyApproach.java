@@ -4,7 +4,7 @@ public class JumpGameGreedyApproach {
 
     public static void main(String[] args) {
 
-        new JumpGameGreedyApproach().canJump(new int[]{2, 3, 1, 1, 4});
+        new JumpGameGreedyApproach().canJump(new int[]{4, 2, 0, 0, 1, 1, 4, 4, 4, 0, 4, 0});
     }
 
     //[2,3,1,1,4]
