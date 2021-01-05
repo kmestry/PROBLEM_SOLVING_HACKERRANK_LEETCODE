@@ -2,27 +2,26 @@ package com.leetcode;
 
 public class ReachANumber {
 
-    public int reachNumber(int target) {
-
-        return helper(0, Math.abs(target), 0);
-
+    public static void main(String[] args) {
+        new ReachANumber().reachNumber(5);
     }
 
-    private int helper(int source, int target, int steps) {
+    public int reachNumber(int target) {
+        target = Math.abs(target);
 
-        if (Math.abs(source) > target) {
-            return Integer.MAX_VALUE;
+        int sum = 0;
+        int step = 0;
+
+        while (sum < target) {
+            step++;
+            sum += step;
         }
 
-        if (Math.abs(source) == target) {
-            return steps;
+        while ((sum - target) % 2 != 0) {
+            step++;
+            sum += step;
         }
 
-        int case1 = helper(source + steps + 1, target, steps + 1);
-        int case2 = helper(source - steps - 1, target, steps + 1);
-
-        int res = Math.min(case1, case2);
-
-        return res;
+        return step;
     }
 }
