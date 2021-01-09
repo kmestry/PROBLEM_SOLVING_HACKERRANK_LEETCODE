@@ -8,6 +8,9 @@ public class RemoveDuplicatesFromSortedList {
     }
 
     public ListNode deleteDuplicates(ListNode head) {
+        if (head == null) {
+            return null;
+        }
 
         ListNode dummy = new ListNode(-10);
         dummy.next = head;
@@ -23,8 +26,7 @@ public class RemoveDuplicatesFromSortedList {
             headTraverse = headTraverse.next;
         }
 
-        if (prev != null)
-            prev.next = null;
+
         return dummy.next;
     }
 
