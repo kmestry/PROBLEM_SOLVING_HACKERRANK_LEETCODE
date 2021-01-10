@@ -3,6 +3,7 @@ package com.java.thread;
 public class Bank {
     int amount = 100000;
 
+
     synchronized void withdraw(int amount) {
         System.out.println("withdrawing amount!");
 
