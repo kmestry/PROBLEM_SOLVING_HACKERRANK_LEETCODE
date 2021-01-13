@@ -1,4 +1,4 @@
-package com.java.concurrent_util_java2blogsite;
+package com.java.concurrent_util_java2blogsite.concurrent_map;
 
 import java.util.concurrent.ConcurrentHashMap;
 
