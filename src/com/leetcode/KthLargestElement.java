@@ -7,7 +7,7 @@ public class KthLargestElement {
 
     public static void main(String[] args) {
        // new KthLargestElement().findKthLargest(new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4);
-       int result = new KthLargestElement().findKthLargest(new int[]{1,2,3}, 2);
+       int result = new KthLargestElement().findKthLargest(new int[]{1,2,3}, 3);
         System.out.println("result = " + result);
     }
 
