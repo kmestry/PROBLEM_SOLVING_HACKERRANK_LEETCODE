@@ -33,12 +33,11 @@ public class LongestPalindromeSubstringOptimized {
 
     private String expandRange(String s, int left, int right) {
 
-        String string = s;
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
             left--;
             right++;
         }
-        return string.substring(left + 1, right); //left + 1 because after 0 the left will be -1 and the substring method begin index is inclusive.
+        return s.substring(left + 1, right); //left + 1 because after 0 the left will be -1 and the substring method begin index is inclusive.
         // we need not do to right + 1 because right will point  to s.length when it reaches end of string and the substring method end index is exclusive.
 
     }
