@@ -1,5 +1,6 @@
 package com.java.Compare;
 
+import java.util.Set;
 import java.util.TreeSet;
 
 public class Drink implements Comparable {
@@ -12,7 +13,7 @@ public class Drink implements Comparable {
         one.name = "Tea";
         two.name = "Coffee";
 
-        TreeSet<Drink> set = new TreeSet();
+        Set<Drink> set = new TreeSet<>();
         set.add(one);
         set.add(two);
 
@@ -27,7 +28,7 @@ public class Drink implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return 1;
+        return 0;
     }
 
 
