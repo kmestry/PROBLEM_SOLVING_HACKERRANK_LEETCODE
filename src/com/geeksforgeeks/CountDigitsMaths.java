@@ -8,6 +8,9 @@ public class CountDigitsMaths {
 
         int ans1 = new CountDigitsMaths().countDigits(-2121212187);
         System.out.println("ans = " + ans1);
+
+        int ans2 = new CountDigitsMaths().countDigitsApproach2(2121212187);
+        System.out.println("ans = " + ans2);
     }
 
     private int countDigits(int number) {
@@ -17,6 +20,16 @@ public class CountDigitsMaths {
         }
 
         return 1 + countDigits(number / 10);
+    }
+
+    private int countDigitsApproach2(int num) {
+        int count = 0;
+
+        while (num > 0) {
+            num /= 10;
+            count++;
+        }
+        return count;
     }
 
     //works for number greater than 0;
