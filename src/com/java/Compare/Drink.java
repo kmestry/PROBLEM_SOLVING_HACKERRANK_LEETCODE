@@ -1,8 +1,7 @@
 package com.java.Compare;
 
-import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 public class Drink implements Comparable {
     String name;
@@ -14,12 +13,17 @@ public class Drink implements Comparable {
         one.name = "Tea";
         two.name = "Coffee";
 
-        TreeSet set = new TreeSet();
+        Set<Drink> set = new TreeSet<>();
         set.add(one);
         set.add(two);
 
-        List list = (List) set.stream().collect(Collectors.toList());
-        System.out.println(list);
+        System.out.println(set);
+
+        for (Drink obj : set) {
+            System.out.println(obj.name);
+        }
+//        List list = (List) set.stream().collect(Collectors.toList());
+//        System.out.println(list);
     }
 
     @Override
