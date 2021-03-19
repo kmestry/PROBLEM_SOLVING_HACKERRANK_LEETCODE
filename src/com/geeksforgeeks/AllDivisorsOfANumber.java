@@ -4,7 +4,7 @@ public class AllDivisorsOfANumber {
 
     public static void main(String[] args) {
         AllDivisorsOfANumber allDivisorsOfANumber = new AllDivisorsOfANumber();
-        allDivisorsOfANumber.printAllDivisorsOptimized(36);
+        allDivisorsOfANumber.printAllDivisorsOptimized(121);
     }
 
     //naive solution
