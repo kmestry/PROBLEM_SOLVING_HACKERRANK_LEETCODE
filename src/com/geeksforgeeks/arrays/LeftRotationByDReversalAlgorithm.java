@@ -11,6 +11,8 @@ public class LeftRotationByDReversalAlgorithm {
 
     private void rotateByD(int[] array, int d) {
 
+
+        d = d % array.length; // imp step if rotation is greater than array length
         reverse(array, 0, d - 1);
         reverse(array, d, array.length - 1);
         reverse(array, 0, array.length - 1);
