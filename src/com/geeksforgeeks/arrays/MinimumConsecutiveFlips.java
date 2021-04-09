@@ -5,9 +5,9 @@ public class MinimumConsecutiveFlips {
     public static void main(String[] args) {
 
         MinimumConsecutiveFlips minimumConsecutiveFlips = new MinimumConsecutiveFlips();
-        //minimumConsecutiveFlips.minimumConsecutiveFlips(new int[]{1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1});
-        //minimumConsecutiveFlips.minimumConsecutiveFlips(new int[]{0,1});
-        //minimumConsecutiveFlips.minimumConsecutiveFlips(new int[]{1,1});
+        minimumConsecutiveFlips.minimumConsecutiveFlips(new int[]{1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1});
+        minimumConsecutiveFlips.minimumConsecutiveFlips(new int[]{0, 1});
+        minimumConsecutiveFlips.minimumConsecutiveFlips(new int[]{1, 1});
         minimumConsecutiveFlips.minimumConsecutiveFlips(new int[]{1, 1, 0, 0, 0, 1});
     }
 
