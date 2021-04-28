@@ -5,7 +5,7 @@ public class PrintAllPermutationsString {
     public static void main(String[] args) {
 
         PrintAllPermutationsString printAllPermutationsString = new PrintAllPermutationsString();
-        String str = "ABC";
+        String str = "ABCD";
         boolean[] visited = new boolean[str.length()];
         printAllPermutationsString.printAllPermutations(str, new StringBuilder(), visited);
     }
