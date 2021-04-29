@@ -18,7 +18,7 @@ public class PowerOfNumbers {
 
     }
 
-    //DIVIDE AND CONQUER ALGORITHM
+    //DIVIDE AND CONQUER ALGORITHM : O(N)
     long helper(int num, int reverse) {
 
 
