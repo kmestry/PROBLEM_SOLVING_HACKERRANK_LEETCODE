@@ -27,7 +27,7 @@ public class SquareRootBinarySearch {
                 high = mid - 1;
             } else {
                 low = mid + 1;
-                result = mid;
+                result = mid; // find value which is mid * mid <= x
             }
         }
         return result;
