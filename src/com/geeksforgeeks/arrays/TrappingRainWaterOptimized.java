@@ -3,7 +3,9 @@ package com.geeksforgeeks.arrays;
 public class TrappingRainWaterOptimized {
 
     public static void main(String[] args) {
-
+        TrappingRainWaterOptimized trappingRainWater = new TrappingRainWaterOptimized();
+        int result = trappingRainWater.trappingRainWater(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
+        System.out.println("result = " + result);
     }
 
     // TC : theta(n)
