@@ -7,6 +7,9 @@ public class ArrayTest {
         call_array(arr[0], arr);
         System.out.println("arr[0] = " + arr[0]);
         System.out.println("arr[1] = " + arr[1]);
+
+        //string test
+        System.out.println(1 + 2 + "3" + 2 + 1);
     }
 
     static void call_array(int i, int[] arr) {

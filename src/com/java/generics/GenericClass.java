@@ -18,7 +18,7 @@ public class GenericClass<T> {
 
         GenericClass.printList(Arrays.asList(1, 1.2, 23.34f));
 
-        GenericClass.printListSuper(Arrays.asList("32", 23, new Double(23.342), new Object()));
+        GenericClass.printListSuper(Arrays.asList("32", 23, 23.342, new Object()));
 
     }
 
