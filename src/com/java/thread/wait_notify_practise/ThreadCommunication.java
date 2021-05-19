@@ -6,7 +6,7 @@ public class ThreadCommunication {
         NumberI i = new NumberI();
         i.setEven(true);
         i.startVal = 0;
-        i.endVal = 100;
+        i.endVal = 10;
         PrintEven printEven = new PrintEven(i);
         PrintOdd printOdd = new PrintOdd(i);
 
@@ -17,7 +17,7 @@ public class ThreadCommunication {
 
         //Thread.sleep(3000);
         t2.start();
-        Thread.sleep(3000);
+        Thread.sleep(100);
         t1.start();
 
 

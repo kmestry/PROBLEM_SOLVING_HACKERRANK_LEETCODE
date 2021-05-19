@@ -15,6 +15,7 @@ public class PrintOdd implements Runnable {
 
             while (numberI.startVal <= numberI.endVal) {
                 try {
+                    System.out.println("Waiting odd");
                     numberI.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -23,6 +24,7 @@ public class PrintOdd implements Runnable {
                     System.out.println("value printed by thread  : " + Thread.currentThread().getName() + " : " + numberI.startVal);
                     numberI.startVal++;
                     numberI.isEven = true;
+                    System.out.println("notify even!");
                     numberI.notify();
                 }
             }
