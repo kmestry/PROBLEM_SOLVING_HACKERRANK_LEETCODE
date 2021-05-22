@@ -14,6 +14,7 @@ public class CyclicBarrierMain {
         new Thread(task1, "Thread 1").start();
         new Thread(task2, "Thread 2").start();
         new Thread(task3, "Thread 3").start();
+
         new Thread(runnableTask4, "Thread-4").start();
 
 

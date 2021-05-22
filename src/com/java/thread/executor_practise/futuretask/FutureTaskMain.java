@@ -8,6 +8,7 @@ import java.util.concurrent.FutureTask;
 public class FutureTaskMain {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
+
         Multiplication m1 = new Multiplication(30, 41, 2000);
         Multiplication m2 = new Multiplication(323, 434, 5000);
 
