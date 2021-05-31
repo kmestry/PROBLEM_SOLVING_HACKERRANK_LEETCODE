@@ -6,6 +6,8 @@ import java.util.List;
 public class NaivePatternSearching {
     public static void main(String[] args) {
 
+        System.out.println("abc".hashCode());
+        System.out.println("bca".hashCode());
         NaivePatternSearching naivePatternSearching = new NaivePatternSearching();
         // List<Integer> list = naivePatternSearching.naivePatternSearch("ABABABCD", "ABAB");
         //  List<Integer> list = naivePatternSearching.naivePatternSearch("ABCABCD", "ABCD");
