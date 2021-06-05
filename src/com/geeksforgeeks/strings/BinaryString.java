@@ -16,6 +16,7 @@ public class BinaryString {
             }
         }
 
+
         return counter;
     }
 }
