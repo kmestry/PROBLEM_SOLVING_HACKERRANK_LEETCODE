@@ -7,6 +7,9 @@ public class ImplementStrStr {
 
     public static void main(String[] args) {
         System.out.println(Long.MAX_VALUE);
+
+        String test = "abbbaababbbabbbabbbbbabaaaaaaabaabaabbbbaabab";
+        System.out.println(test.substring(0, 46));
         ImplementStrStr implementStrStr = new ImplementStrStr();
 //        "abbbbbaabbaabaabbbaaaaabbabbbabbbbbaababaabbaabbbbbababaababbbbaaabbbbabaabaaaabbbbabbbaabbbaabbaaabaabaaaaaaaa"
 //        "abbbaababbbabbbabbbbbabaaaaaaabaabaabbbbaabab"
