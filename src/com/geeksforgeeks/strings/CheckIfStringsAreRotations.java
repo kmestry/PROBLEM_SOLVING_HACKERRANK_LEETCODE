@@ -16,6 +16,17 @@ public class CheckIfStringsAreRotations {
     //Brute Force . TLE GFG
     private boolean checkIfRotation(String s1, String s2) {
 
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+        String concatenatedString = s1.repeat(2);
+
+
+        return concatenatedString.contains(s2);
+    }
+
+    private boolean checkIfRotationBruteForce(String s1, String s2) {
+
         int length = s1.length();
 
         StringBuilder sb = new StringBuilder();
