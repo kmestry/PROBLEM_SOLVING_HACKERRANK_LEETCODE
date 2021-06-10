@@ -5,6 +5,9 @@ public class IsAnagram {
     //Function is to check whether two strings are anagram of each other or not.
     public static boolean isAnagram(String a, String b) {
 
+
+        // characters in both string same count
+        //dog ogd  ;; - 'a'
         // Your code here
 
         char[] array = new char[128];
@@ -18,7 +21,7 @@ public class IsAnagram {
         }
 
         for (char c : array) {
-            if ((int) c > 0) {
+            if ((int) c != 0) {
                 return false;
             }
         }
