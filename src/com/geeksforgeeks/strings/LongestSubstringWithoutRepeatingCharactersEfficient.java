@@ -5,6 +5,11 @@ import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharactersEfficient {
 
+    public static void main(String[] args) {
+        LongestSubstringWithoutRepeatingCharactersEfficient ls = new LongestSubstringWithoutRepeatingCharactersEfficient();
+        ls.lengthOfLongestSubstring("pwwkew");
+    }
+
     public int lengthOfLongestSubstring(String s) {
 
         int left = 0;
