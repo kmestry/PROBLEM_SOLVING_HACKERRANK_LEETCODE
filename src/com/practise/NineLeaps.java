@@ -1,4 +1,4 @@
-package com;
+package com.practise;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -64,7 +64,7 @@ class ProductNumWeekCombo {
     }
 }
 
-public class TestClass {
+public class NineLeaps {
     List<Map<String, CostAndSAles>> convert(Response response) {
 
         List<Product> list = response.getResults();
