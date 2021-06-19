@@ -1,4 +1,4 @@
-package com.hackerrank.altimetrik.live.code;
+package com.hackerrank.altrik.live.code;
 
 import java.util.ArrayList;
 import java.util.Arrays;

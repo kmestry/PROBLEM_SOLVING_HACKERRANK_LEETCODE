@@ -1,4 +1,4 @@
-package com.hackerrank.interview_companies_logicmonitor;
+package com.hackerrank.interview_companies_logic;
 
 public class FirstNonRepeatingCharacter {
 

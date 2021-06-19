@@ -1,4 +1,4 @@
-package com.hackerrank.mphasis;
+package com.hackerrank.mphas;
 
 import java.util.List;
 
