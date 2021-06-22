@@ -38,4 +38,33 @@ public class LongestIncreasingSubsequence {
 
         return maxLis;
     }
+
+    public int lengthOfLISPractise(int[] nums) {
+
+        int j = 0;
+        int i = 1;
+        int[] lis = new int[nums.length];
+        Arrays.fill(lis, 1);
+        while (i < nums.length) {
+            while (j < i) {
+
+                if (nums[i] > nums[j] && lis[i] <= lis[j]) {
+                    lis[i] = 1 + lis[j];
+                }
+                j++;
+            }
+            i++;
+            j = 0;
+        }
+        int maxLis = Integer.MIN_VALUE;
+
+        for (int k = 0; k < lis.length; k++) {
+            maxLis = Math.max(maxLis, lis[k]);
+        }
+
+
+        return maxLis;
+
+
+    }
 }

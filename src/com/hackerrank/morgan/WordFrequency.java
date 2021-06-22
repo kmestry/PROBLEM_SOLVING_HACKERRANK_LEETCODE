@@ -10,7 +10,7 @@ public class WordFrequency {
                     "as", "a" , "lion" : 1*/
 
         WordFrequency wordFrequency = new WordFrequency();
-        wordFrequency.printNthHighest("sa", 0);
+        wordFrequency.printNthHighest("good is good is good as a lion", 1);
 
     }
 
