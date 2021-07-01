@@ -42,8 +42,8 @@ public class BestTimeToBuyAndSellStock2 {
             return maxProfit;
 
         String key = index + "leetcode" + isBuy;
-        if (memoizeMap.containsKey(key))
-            return memoizeMap.get(key);
+//        if (memoizeMap.containsKey(key))
+//            return memoizeMap.get(key);
 
         if (isBuy) {
             int profitWhenBuy = helper(index + 1, prices, false) - prices[index]; // reduce price when buy
