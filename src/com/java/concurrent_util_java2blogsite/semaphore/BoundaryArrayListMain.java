@@ -4,22 +4,18 @@ public class BoundaryArrayListMain {
     public static void main(String[] args) {
         final BoundedArrayList ba = new BoundedArrayList(5);
 
-        Runnable runnable1 = new Runnable() {
+        Runnable runnable1 = () -> {
+            try {
+                ba.add("John");
+                ba.add("Martin");
+                ba.add("Adam");
+                ba.add("Prince");
+                ba.add("Tod");
+                System.out.println("Available Permits : " + ba.getSemaphore().availablePermits());
+                ba.add("Tony");
+                System.out.println("Final list: " + ba.getArraylist());
+            } catch (InterruptedException ie) {
 
-            @Override
-            public void run() {
-                try {
-                    ba.add("John");
-                    ba.add("Martin");
-                    ba.add("Adam");
-                    ba.add("Prince");
-                    ba.add("Tod");
-                    System.out.println("Available Permits : " + ba.getSemaphore().availablePermits());
-                    ba.add("Tony");
-                    System.out.println("Final list: " + ba.getArraylist());
-                } catch (InterruptedException ie) {
-
-                }
             }
         };
 
