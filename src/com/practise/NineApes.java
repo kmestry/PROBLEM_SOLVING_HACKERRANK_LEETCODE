@@ -64,7 +64,7 @@ class ProductNumWeekCombo {
     }
 }
 
-public class NineLeaps {
+public class NineApes {
     List<Map<String, CostAndSAles>> convert(Response response) {
 
         List<Product> list = response.getResults();
