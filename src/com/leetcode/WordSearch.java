@@ -53,7 +53,8 @@ public class WordSearch {
         b[r][c] = '0';
 
         /* recursion on all 4 sides for next letter, if works: return true */
-        if (help(b, w, r - 1, c, index + 1) || help(b, w, r + 1, c, index + 1) || help(b, w, r, c - 1, index + 1) || help(b, w, r, c + 1, index + 1))
+        if (help(b, w, r - 1, c, index + 1) || help(b, w, r + 1, c, index + 1)
+                || help(b, w, r, c - 1, index + 1) || help(b, w, r, c + 1, index + 1))
             return true;
 
         /* Set back to unseen */
