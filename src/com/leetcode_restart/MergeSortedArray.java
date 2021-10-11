@@ -1,8 +1,10 @@
 package com.leetcode_restart;
 
+import org.jetbrains.annotations.NotNull;
+
 public class MergeSortedArray {
     class Solution {
-        public void merge(int[] nums1, int m, int[] nums2, int n) {
+        public void merge(int @NotNull [] nums1, int m, int @NotNull [] nums2, int n) {
 
             int elementPointer = nums1.length - 1;
             int nums2Right = nums2.length - 1;

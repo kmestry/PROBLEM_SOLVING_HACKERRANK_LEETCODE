@@ -1,10 +1,12 @@
 package com.leetcode_restart;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
 public class IntersectionOfTwoArrays {
 
-    public int[] intersect(int[] nums1, int[] nums2) {
+    public int @NotNull [] intersect(int @NotNull [] nums1, int @NotNull [] nums2) {
 
         List<Integer> resultList = new ArrayList<>();
         Set<Integer> set = new HashSet<>();
