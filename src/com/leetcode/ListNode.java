@@ -2,9 +2,9 @@ package com.leetcode;
 
 public class ListNode {
     public ListNode next;
-    int val;
+    public int val;
 
-    ListNode() {
+    public ListNode() {
     }
 
     public ListNode(int val) {
