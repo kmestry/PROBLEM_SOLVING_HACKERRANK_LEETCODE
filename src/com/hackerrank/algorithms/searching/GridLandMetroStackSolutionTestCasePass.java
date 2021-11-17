@@ -1,11 +1,7 @@
 package com.hackerrank.algorithms.searching;
 
 import java.io.IOException;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class GridLandMetroStackSolutionTestCasePass {
 

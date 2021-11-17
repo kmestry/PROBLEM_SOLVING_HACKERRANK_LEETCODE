@@ -10,13 +10,13 @@ public class DiagonalTraverse {
         [ 7, 8, 9 ]*/
 // pattern : ////
         //new DiagonalTraverse().findDiagonalOrder(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
-        new DiagonalTraverse().findDiagonalOrder(new int[][]{{1,2},{3,4}});
+        new DiagonalTraverse().findDiagonalOrder(new int[][]{{1, 2}, {3, 4}});
     }
 
     //hint : reverse diagonal with odd number count.
     public int[] findDiagonalOrder(int[][] matrix) {
 
-        if(matrix.length == 0){
+        if (matrix.length == 0) {
             return new int[]{};
         }
         int[] result = new int[matrix.length * matrix[0].length];

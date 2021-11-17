@@ -15,7 +15,7 @@ public class LongestPalindromeSubstringJanChallenge {
             StringBuilder check = new StringBuilder(s.charAt(i) + "");
             for (int j = i + 1; j < length; j++) {
                 StringBuilder newCheck = check.append(s.charAt(j));
-                if (newCheck.length() > result.length() && isPalindrome(String.valueOf(newCheck)) ) {
+                if (newCheck.length() > result.length() && isPalindrome(String.valueOf(newCheck))) {
                     result = String.valueOf(newCheck);
                 }
             }

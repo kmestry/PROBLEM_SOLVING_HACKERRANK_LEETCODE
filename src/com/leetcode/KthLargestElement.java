@@ -6,8 +6,8 @@ import java.util.PriorityQueue;
 public class KthLargestElement {
 
     public static void main(String[] args) {
-       // new KthLargestElement().findKthLargest(new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4);
-       int result = new KthLargestElement().findKthLargest(new int[]{1,2,3}, 3);
+        // new KthLargestElement().findKthLargest(new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4);
+        int result = new KthLargestElement().findKthLargest(new int[]{1, 2, 3}, 3);
         System.out.println("result = " + result);
     }
 
@@ -23,6 +23,7 @@ public class KthLargestElement {
         }
         return priorityQueue.poll();
     }
+
     public int findKthLargestApproach2(int[] nums, int k) {
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Comparator.reverseOrder());
         for (int num : nums) {

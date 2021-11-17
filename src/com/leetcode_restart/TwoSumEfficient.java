@@ -1,13 +1,12 @@
 package com.leetcode_restart;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSumEfficient {
 
-    public int @NotNull [] twoSum(int @NotNull [] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {
 
         Map<Integer, Integer> map = new HashMap<>();
         int[] result = new int[2];

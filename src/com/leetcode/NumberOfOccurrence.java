@@ -9,7 +9,6 @@ public class NumberOfOccurrence {
     //cloud
 
 
-
     private static void getOccurrenceOfWord(String input) {
         Map<String, Integer> map = new HashMap<>();
 

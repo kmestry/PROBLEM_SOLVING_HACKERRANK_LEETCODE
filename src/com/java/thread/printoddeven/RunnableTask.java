@@ -5,6 +5,7 @@ public class RunnableTask implements Runnable {
     static Object lock = new Object();
     static int number = 1;
     int remainder;
+
     public RunnableTask(int remainder) {
         this.remainder = remainder;
     }

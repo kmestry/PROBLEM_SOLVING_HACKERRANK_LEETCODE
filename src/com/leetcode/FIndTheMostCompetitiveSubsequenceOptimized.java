@@ -5,7 +5,7 @@ import java.util.Stack;
 public class FIndTheMostCompetitiveSubsequenceOptimized {
 
     public static void main(String[] args) {
-        int [] nums = new FIndTheMostCompetitiveSubsequenceOptimized().mostCompetitive(new int[]{71, 18, 52, 29, 55, 73, 24, 42, 66, 8, 80, 2}, 3);
+        int[] nums = new FIndTheMostCompetitiveSubsequenceOptimized().mostCompetitive(new int[]{71, 18, 52, 29, 55, 73, 24, 42, 66, 8, 80, 2}, 3);
         System.out.println("nums = " + nums);
     }
 
@@ -21,7 +21,7 @@ public class FIndTheMostCompetitiveSubsequenceOptimized {
             }
             stack.push(num);
         }
-        while (stack.size() > k){
+        while (stack.size() > k) {
             stack.pop();
         }
         System.out.println("stack = " + stack);

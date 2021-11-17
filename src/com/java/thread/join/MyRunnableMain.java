@@ -4,9 +4,9 @@ public class MyRunnableMain {
     public static void main(String[] args) {
 
         MyRunnable myRunnable = new MyRunnable();
-        Thread t1 = new Thread(myRunnable , "thread 1");
-        Thread t2 = new Thread(myRunnable , "thread 2");
-        Thread t3 = new Thread(myRunnable , "thread 3");
+        Thread t1 = new Thread(myRunnable, "thread 1");
+        Thread t2 = new Thread(myRunnable, "thread 2");
+        Thread t3 = new Thread(myRunnable, "thread 3");
 
         t3.setDaemon(true);
         t1.start();

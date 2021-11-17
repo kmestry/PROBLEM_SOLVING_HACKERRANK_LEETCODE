@@ -1,10 +1,6 @@
 package com.leetcode;
 
 
-
-
-
-
 public class KDiffPairsInArray {
 
     //brute force initial solution.

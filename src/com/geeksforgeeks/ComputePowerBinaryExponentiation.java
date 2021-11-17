@@ -17,7 +17,7 @@ public class ComputePowerBinaryExponentiation {
             if (pow % 2 != 0) {
                 result *= num;
             }
-           // pow /= 2; or pow = pow >> 1. both are same. bitwise is faster
+            // pow /= 2; or pow = pow >> 1. both are same. bitwise is faster
             pow = pow >> 1;
             num *= num;
         }

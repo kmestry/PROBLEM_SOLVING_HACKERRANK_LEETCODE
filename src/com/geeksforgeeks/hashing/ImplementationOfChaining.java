@@ -18,6 +18,17 @@ public class ImplementationOfChaining {
         }
     }
 
+    public static void main(String[] args) {
+        ImplementationOfChaining implementationOfChaining = new ImplementationOfChaining(5);
+        implementationOfChaining.insert(10);
+        implementationOfChaining.insert(22);
+        implementationOfChaining.insert(30);
+
+        implementationOfChaining.delete(30);
+
+        System.out.println(implementationOfChaining.search(22));
+    }
+
     void insert(int value) {
         int index = value % bucketSize;
         LinkedList<Integer> linkedList = list.get(index);
@@ -34,17 +45,6 @@ public class ImplementationOfChaining {
         int index = value % bucketSize;
         LinkedList<Integer> linkedList = list.get(index);
         return linkedList.contains(value);
-    }
-
-    public static void main(String[] args) {
-        ImplementationOfChaining implementationOfChaining = new ImplementationOfChaining(5);
-        implementationOfChaining.insert(10);
-        implementationOfChaining.insert(22);
-        implementationOfChaining.insert(30);
-
-        implementationOfChaining.delete(30);
-
-        System.out.println(implementationOfChaining.search(22));
     }
 
 }

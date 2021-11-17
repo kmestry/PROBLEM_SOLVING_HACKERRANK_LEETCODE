@@ -1,7 +1,5 @@
 package com.leetcode_restart;
 
-import com.leetcode.ValidSudokuOptimized;
-
 import java.util.HashSet;
 import java.util.Set;
 

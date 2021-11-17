@@ -22,19 +22,19 @@ public class QuadraticEquationRoot {
             return list;
         }
 
-        double doubleSqrt =  Math.sqrt(val1);
+        double doubleSqrt = Math.sqrt(val1);
         int divisor = 2 * a;
 
-        double root1Val1 =  (-b + doubleSqrt);
-        double root2Val2 =  (-b - doubleSqrt);
+        double root1Val1 = (-b + doubleSqrt);
+        double root2Val2 = (-b - doubleSqrt);
 
-        double root1 =  (root1Val1 / (double) divisor);
+        double root1 = (root1Val1 / (double) divisor);
         double root2 = (root2Val2 / (double) divisor);
 
 
         list.add((int) Math.floor(root1));
         list.add((int) Math.floor(root2));
-        list.sort((o1, o2) -> o2-o1);
+        list.sort((o1, o2) -> o2 - o1);
 
         return list;
     }

@@ -17,6 +17,6 @@ public class StreamApi {
         Stream test = Stream.generate(() -> "hello").limit(5);
         test.forEach(System.out::println);
 
-        Stream.iterate(100 , integer -> integer + 1).limit(10).forEach(System.out::println);
+        Stream.iterate(100, integer -> integer + 1).limit(10).forEach(System.out::println);
     }
 }

@@ -3,8 +3,8 @@ package com.java.thread.printoddeven;
 public class PrintSequenceThreeThreads implements Runnable {
 
     static Object lock = new Object();  // static is imp ..otherwise IllegalMonitorStateException
-    int remainder;
     static int number = 1; //IllegalMonitorStateException
+    int remainder;
 
     public PrintSequenceThreeThreads(int remainder) {
         this.remainder = remainder;
@@ -18,7 +18,7 @@ public class PrintSequenceThreeThreads implements Runnable {
 
                 while (number % 3 != remainder && number < 9) {
                     try {
-                       // System.out.println("==" + Thread.currentThread().getName());
+                        // System.out.println("==" + Thread.currentThread().getName());
                         lock.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();

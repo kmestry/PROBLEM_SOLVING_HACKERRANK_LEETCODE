@@ -58,6 +58,6 @@ public class RottenOranges {
             }
         }
 
-        return fresh == 0 ? count  : -1;
+        return fresh == 0 ? count : -1;
     }
 }

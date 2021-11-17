@@ -41,7 +41,7 @@ public class SmallestStringWithGivenNumericValue {
             list.add(ch);
             helper(n, k, list, sum + i + 1);
             list.remove(list.size() - 1);
-            if(result.length() > 0){
+            if (result.length() > 0) {
                 return;
             }
         }

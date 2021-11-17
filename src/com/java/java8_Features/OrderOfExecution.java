@@ -7,14 +7,14 @@ import java.util.stream.Stream;
 public class OrderOfExecution {
 
     public static void main(String[] args) {
-       Stream<String> cars =  Stream.of("Honda" , "Hero" , "Suzuki" , "Sega").map(s -> {
-           System.out.println("s = " + s);
-           return s.toUpperCase(Locale.ROOT);
-       }).filter(s -> {
-           System.out.println("s = " + s);
-           return  s.startsWith("S");
+        Stream<String> cars = Stream.of("Honda", "Hero", "Suzuki", "Sega").map(s -> {
+            System.out.println("s = " + s);
+            return s.toUpperCase(Locale.ROOT);
+        }).filter(s -> {
+            System.out.println("s = " + s);
+            return s.startsWith("S");
 
-       });
+        });
 
         Optional<String> result = cars.findAny();
         System.out.println("result = " + result.get());

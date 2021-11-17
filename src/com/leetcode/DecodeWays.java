@@ -6,7 +6,7 @@ public class DecodeWays {
        /*int result =  new DecodeWays().numDecodings("2208");
         System.out.println("result = " + result);*/
 
-        int result =  new DecodeWays().numDecodings("230");
+        int result = new DecodeWays().numDecodings("230");
         System.out.println("result = " + result);
     }
 
@@ -24,7 +24,7 @@ public class DecodeWays {
 
             // can't make progress, return 0
             //|| curr == 0 && prev * 10 + curr > 26
-            if (prev == 0 && curr == 0 ) {
+            if (prev == 0 && curr == 0) {
                 return 0;
             }
             // can't use the previous value, so can only get to this state from the previous

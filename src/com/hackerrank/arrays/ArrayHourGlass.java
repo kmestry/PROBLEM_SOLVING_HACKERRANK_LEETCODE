@@ -12,7 +12,7 @@ public class ArrayHourGlass {
     static int hourglassSum(int[][] arr) {
 
 
-       // System.out.println("arr.length = " + arr.length);
+        // System.out.println("arr.length = " + arr.length);
         int sum = 0;
         int rowCounter = 3;
         int columnCounter = 3;

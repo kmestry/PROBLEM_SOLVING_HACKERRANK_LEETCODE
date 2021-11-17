@@ -6,7 +6,7 @@ public class EquilibriumPointOptimized {
         EquilibriumPointOptimized.equilibriumPoint(new long[]{1, 3, 5, 2, 2}, 5);
     }
 
-    
+
     public static int equilibriumPoint(long[] arr, int n) {
 
         long leftSum = 0;
@@ -18,7 +18,7 @@ public class EquilibriumPointOptimized {
         }
 
         int index = 0;
-        long sumTillNow =  0;
+        long sumTillNow = 0;
         for (long num : arr) {
             sumTillNow += num;
             long rightSum = totalSum - sumTillNow;

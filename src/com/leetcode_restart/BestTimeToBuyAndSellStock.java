@@ -1,10 +1,9 @@
 package com.leetcode_restart;
 
-import org.jetbrains.annotations.NotNull;
 
 public class BestTimeToBuyAndSellStock {
 
-    public int maxProfit(int @NotNull [] prices) {
+    public int maxProfit(int[] prices) {
 
         int maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {

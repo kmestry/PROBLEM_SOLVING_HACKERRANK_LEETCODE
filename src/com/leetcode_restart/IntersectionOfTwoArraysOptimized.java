@@ -1,6 +1,5 @@
 package com.leetcode_restart;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +8,7 @@ import java.util.Map;
 
 public class IntersectionOfTwoArraysOptimized {
 
-    public int @NotNull [] intersect(int @NotNull [] nums1, int @NotNull [] nums2) {
+    public int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer, Integer> map = new HashMap<>();
         List<Integer> resultList = new ArrayList<>();
 

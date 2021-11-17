@@ -1,13 +1,12 @@
 package com.leetcode_restart;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PascalsTriangle {
 
-    public @NotNull List<List<Integer>> generate(int numRows) {
+    public List<List<Integer>> generate(int numRows) {
 
         List<List<Integer>> result = new ArrayList<>();
 

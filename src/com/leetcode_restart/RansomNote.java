@@ -1,10 +1,9 @@
 package com.leetcode_restart;
 
-import org.jetbrains.annotations.NotNull;
 
 public class RansomNote {
 
-    public boolean canConstruct(@NotNull String ransomNote, @NotNull String magazine) {
+    public boolean canConstruct(String ransomNote, String magazine) {
 
         int[] charRN = new int[26];
 

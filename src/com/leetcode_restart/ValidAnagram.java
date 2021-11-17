@@ -1,10 +1,9 @@
 package com.leetcode_restart;
 
-import org.jetbrains.annotations.NotNull;
 
 public class ValidAnagram {
 
-    public int firstUniqChar(@NotNull String s) {
+    public int firstUniqChar(String s) {
 
         int[] arr = new int[26];
 
