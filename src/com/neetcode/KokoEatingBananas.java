@@ -16,7 +16,7 @@ public class KokoEatingBananas {
         int min = 1;
         int max = getMax(piles);
 
-        while (min <= max) {
+        while (min < max) {
             int mid = (min + max) / 2;
             int hrsTillNow = 0;
             for (int i = 0; i < piles.length; i++) {
@@ -38,7 +38,6 @@ public class KokoEatingBananas {
         }
 
         return max;
-
     }
 
     private int getMax(int[] piles) {
@@ -50,5 +49,9 @@ public class KokoEatingBananas {
 
         return max;
     }
-
 }
+
+
+
+
+
